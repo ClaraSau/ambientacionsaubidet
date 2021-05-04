@@ -1,0 +1,365 @@
+@mixin bloqueservicios ($fila){
+        height: 600px;
+        display: flex;
+        flex-direction: $fila;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+}
+
+@mixin bloquetextos ($alinear){
+        height: 400px;
+        flex-basis: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center ;
+        align-items: $alinear;
+        margin: 0 50px;
+}
+
+.imagenServicios{
+    height: 200px;
+    flex-basis: 400px;
+    overflow: hidden;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    #headerServicios {
+        @extend .headers;
+        background-image: linear-gradient(179deg, rgba(198,170,158,0.5) 0%, rgba(232,219,212,0.5) 100%), url("../FOTOS/header-nosotras.jpg");
+
+    }
+
+    .bloqueA {
+        @include bloqueservicios(row);
+
+        &__contenedorImg{
+            @extend .imagenServicios;
+
+            &__Img{
+                transition: all 5s;
+            
+            }
+
+            &__Img:hover{
+                transform: scale(1.1,1.1);
+            
+            }
+        }
+
+        &__contenedortexto{
+            @include bloquetextos (start);
+
+            &__titulo{
+                color: $color-gris;
+                text-align: left;
+            }
+
+            &__subtitulo{
+                text-align: left;
+            }
+
+            &__linea{
+                width: 50px;
+                border: 1px solid #c6aa9d;
+                margin: 5px 0 5px auto;
+                opacity: 1;
+                margin-left: 0;
+            }
+
+            &__texto{
+                text-align: left;
+                padding-top: 10px;
+            }
+        }
+    }
+
+    .bloqueB{
+        @include bloqueservicios(row-reverse);
+
+        .textoIzquierda{
+            @include bloquetextos (flex-end);
+        }
+
+        h2{
+            color: #979f9f ;
+        }
+        p {
+            text-align: right;
+            padding-top: 10px;
+        }
+
+        hr{
+            width: 50px;
+            border: 1px solid #c6aa9d;
+            margin: 5px 0 5px auto;
+            opacity: 1;
+        }
+
+        .imagenIzquierda{
+            @extend .imagenServicios;
+    
+    
+            img{
+                transition: all 5s;
+            
+            }
+    
+            img:hover{
+                transform: scale(1.1,1.1);
+            }
+        }
+        
+    }
+
+
+
+    #serviciosPasos{
+        display: grid;
+        grid-template-columns: 10% repeat(4, 1fr) 10%;
+        padding: 50px 0;
+        background-color: #edebe9;
+        margin-top: 50px;
+
+        .textoPasos{
+            grid-column: 2/6;
+            grid-row: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 50px 0;
+
+            p{
+                font-size: $tamano-texto;
+            }      
+        }
+
+        .paso{
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            text-align: center;
+            padding: 0 30px;
+
+            &__titulo{
+                text-align: center;
+            }
+
+            &__lineaVertical{
+                border-left: 2px solid #979f9f;
+                height: 50px;
+            }
+
+            &__texto{
+                font-size: 12px;
+                text-align: center;
+                padding-top: 10px;
+            }
+        }
+        #paso1{ 
+            grid-column: 2/3;
+            grid-row: 2;        
+        }
+        
+        #paso2{
+            grid-column: 3/4 ;
+            grid-row: 2 ;
+            
+            
+        }
+        
+        #paso3{
+            grid-column: 4/5 ;
+            grid-row: 2 ;
+            
+        }
+        
+        #paso4{
+            grid-column: 5/6;
+            grid-row: 2;
+            
+        }
+
+    }
+
+}
+
+@media (min-width:761px) and (max-width:1024px){
+    .main{
+        #serviciosPasos{
+            
+            .paso{
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                align-items: center;
+                text-align: left;
+                padding: 0 30px;
+    
+                &__titulo{
+                    text-align: left;
+                }
+    
+                &__lineaVertical{ 
+                    margin: 0 10px;
+                    height: 80%;
+                }
+    
+                &__texto{
+                    text-align: left;
+                    
+                }
+            } 
+            
+            #paso1{ 
+                grid-column: 2/4;
+                grid-row: 2;        
+            }
+            
+            #paso2{
+                grid-column: 4/6 ;
+                grid-row: 2 ;
+                
+                
+            }
+            
+            #paso3{
+                grid-column: 2/4 ;
+                grid-row: 3 ;
+                
+            }
+            
+            #paso4{
+                grid-column: 4/6;
+                grid-row: 3;
+                
+            }
+    
+        }
+    }
+}
+
+@media (max-width:760px){
+    .main{
+        .bloqueA {
+            @include bloqueservicios(column);
+            height: auto;
+            margin: 40px 0;
+            width: 100%;
+    
+            &__contenedorImg{
+                display: none;
+                
+            }
+    
+            &__contenedortexto{
+                align-items: center;
+    
+                &__titulo{
+                    color: $color-gris;
+                    text-align: center;
+                }
+    
+                &__subtitulo{
+                    text-align: center;
+                }
+    
+                &__texto{
+                    text-align: center;
+                    padding-top: 10px;
+                }
+            }
+        }
+
+        .bloqueB{
+            flex-direction: column;
+            height: auto;
+            margin: 40px 0;
+            width: 100%;
+
+            .imagenIzquierda{
+                display: none;
+            }
+
+            .textoIzquierda{
+                flex-direction: column;
+                align-items: center;
+
+                hr{
+                    margin: 5px auto 5px auto;
+                }
+
+                p{
+                    text-align: center;
+                }
+            }
+        }
+
+
+
+
+
+        #serviciosPasos{
+            
+            .paso{
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                align-items: center;
+                text-align: left;
+                padding: 0;
+    
+                &__titulo{
+                    text-align: left;
+                }
+    
+                &__lineaVertical{ 
+                    margin: 0 10px;
+                    height: 80%;
+                }
+    
+                &__texto{
+                    text-align: left;
+                    
+                }
+            } 
+            
+            #paso1{ 
+                grid-column: 2/6;
+                grid-row: 2;        
+            }
+            
+            #paso2{
+                grid-column: 2/6 ;
+                grid-row: 3 ;
+                
+                
+            }
+            
+            #paso3{
+                grid-column: 2/6 ;
+                grid-row: 4 ;
+                
+            }
+            
+            #paso4{
+                grid-column: 2/6;
+                grid-row: 5;
+                
+            }
+    
+        }
+    }
+}
+

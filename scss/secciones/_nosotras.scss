@@ -1,0 +1,256 @@
+.nosotras{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    #headernosotras{
+        @extend .headers;
+        background-image: linear-gradient(179deg, rgba(198,170,158,0.5) 0%, rgba(232,219,212,0.5) 100%), url("../FOTOS/header-nosotras.jpg");
+
+    }
+
+    .contenedorNosotras {
+        height: 600px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+        .imagenNosotras{ 
+            flex-basis: 500px;
+            overflow: hidden;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            img{
+                transition: all 5s;
+            
+            }
+
+            img:hover{
+                transform: scale(1.2,1.2);
+            }
+        }
+
+        .textoDerecha{
+            height: 400px;
+            flex-basis: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center ;
+            align-items: start;
+            margin: 0 50px;
+        
+            h2{
+                color: #979f9f ;
+            }
+        
+            hr{
+                width: 50px;
+                border: 1px solid #c6aa9d;
+                margin: 5px 0;
+            }
+
+            .lineaCortaMedio{
+                width: 50px;
+                border: 1px solid #c6aa9d;
+                margin: 5px 0;
+                opacity: 1;
+            }
+        
+            
+        }
+    }
+    
+    #contenedorTestimonios{
+            display: grid;
+            grid-template-columns: 10% repeat(4, 1fr) 10%;
+            grid-template-rows: auto;
+            background: linear-gradient(90deg, rgba(227,222,222,1) 0%, rgba(249,244,235,1) 100%);
+            margin-top: 50px;
+            padding: 50px 0;
+
+            .testimoniosTitulo{
+                grid-column: 2/6;
+                grid-row: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin: 50px 0;
+            }
+
+            .testimonio{
+                padding: 10px 10px 50px 10px;
+
+                &__estrellas{
+                    color:  #c6aa9d;;
+                }
+
+                &__titulo{
+                    font-weight: 500 ;
+                    font-size: 24px;
+                    color: $color-grisoscuro;
+                }
+
+                &__texto{
+                    font-style: italic;
+                    font-size: $tamano-texto;
+                    line-height: 1.5em;
+                }
+
+                &__nombres{
+                    color: black;
+                    font-size: 17px;
+                    font-weight: 400;
+                }
+            }
+              
+        
+
+        #testimonio1{
+            grid-column: 2/3;
+            grid-row: 2;
+            
+        }
+        
+        #testimonio2{
+            grid-column: 3/4 ;
+            grid-row: 2 ;
+            
+        }
+        
+        #testimonio3{
+            grid-column: 4/5 ;
+            grid-row: 2 ;
+            
+        }
+        
+        #testimonio4{
+            grid-column: 5/6;
+            grid-row: 2;
+            
+        }
+
+        
+    
+    }
+}
+
+@media (min-width:761px) and (max-width:1024px){
+
+    .nosotras{
+        .contenedorNosotras{
+            height: auto;
+            padding: 50px 0;
+
+            .imagenNosotras{
+                flex-basis: 40%;
+                height: auto;
+                align-items: center;
+
+                img{
+                    width: 400px;
+                    height: 400px;
+                }
+            }
+
+            .textoDerecha{
+                flex-basis: 45%;
+                margin-right: 0;
+            }
+        }
+
+        #contenedorTestimonios{
+            #testimonio1{
+                grid-column: 2/4;
+                grid-row: 2;
+                
+            }
+            
+            #testimonio2{
+                grid-column: 4/6 ;
+                grid-row: 2 ;
+                
+            }
+            
+            #testimonio3{
+                grid-column: 2/4 ;
+                grid-row: 3 ;
+                
+            }
+            
+            #testimonio4{
+                grid-column: 4/6;
+                grid-row: 3;
+                
+            }
+        }
+        
+    }
+}
+
+@media (max-width: 760px){
+
+    .nosotras{
+        .contenedorNosotras{
+            flex-direction: column;
+            height: auto;
+
+            .imagenNosotras{
+                overflow: visible;
+                height: auto;
+                justify-content: start;
+                flex-basis: auto;
+
+                img{
+                    width: 90%;
+                    margin: 0 auto;
+                }
+            }
+
+            .textoDerecha{
+                height: auto;
+                padding-top: 50px;
+                align-items: center;
+
+                h2, p{
+                    text-align: center;
+                }
+            }
+        }
+
+
+
+        #contenedorTestimonios{
+            #testimonio1{
+                grid-column: 2/6;
+                grid-row: 2;
+                
+            }
+            
+            #testimonio2{
+                grid-column: 2/6 ;
+                grid-row: 3 ;
+                
+            }
+            
+            #testimonio3{
+                grid-column: 2/6 ;
+                grid-row: 4 ;
+                
+            }
+            
+            #testimonio4{
+                grid-column: 2/6;
+                grid-row: 5;
+                
+            }
+        }
+        
+    }
+}

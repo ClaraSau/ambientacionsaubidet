@@ -1,0 +1,354 @@
+/*MENU*/  
+#menuBootstrap{
+    background-color: white!important;
+    z-index: 99;
+
+    a{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: $color-grisoscuro;
+    text-transform: uppercase;
+    padding-left: 20px;
+    }
+
+    a:hover{
+        color: $color-rosaviejo;
+        text-decoration: underline;
+    }
+
+}
+
+/*HEADERS*/  
+.headers{
+    height: 450px;
+    background-position: center; 
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+
+    &__titulo{
+        color: white;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    &__linea{
+        height: 1px;
+        width: 40%;
+        background-color: rgb(255, 255, 255);
+        opacity: 1;
+    }
+
+    &__texto{
+        color: white;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    
+
+}
+
+
+/*FOOTER*/  
+footer{
+    background-color: #979F9F;
+    display: grid;
+    width: 100vw;
+    height: auto;
+    grid-template-columns: 100vw;
+    grid-template-areas: 
+                        "contenedorFooter1 contenedorFooter2 contenedorFooter3";
+
+    ul{
+        padding-left: 0;
+                        
+        }
+
+     #contenedorFooter1{
+        display: flex;
+        grid-column: 1/2;
+        grid-row: 2;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        text-align: left;
+        padding: 7% 30px 0 30px;
+
+            li{
+                font-family: 'Montserrat', sans-serif;
+                font-size: 14px;
+                color: #ffffff;
+                list-style: none;
+                list-style-position: outside;
+                margin-bottom: 10px;
+                    }
+
+                a{
+                    font-family: $fontTextos;
+                    font-size: $tamano-texto;
+                    text-align: left;
+                    color: #ffffff;
+                    text-decoration: none;
+                    padding-right: 5px;
+                             }
+                             
+
+                        }
+
+     #contenedorFooter2{
+        display: flex;
+        grid-column: 1/2;
+        grid-row: 1;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        text-align: left;
+        padding: 7% 30px;
+        border-bottom: 1px solid white;
+
+        h3{
+            font-size: $tamano-h3;
+            font-family: $fontTitulos;
+            margin: 0;
+            color: white;
+        }
+
+        p{
+            color: white;
+        }
+
+        input#email{
+            background: rgb(255, 255, 255);
+            border: none;
+            color: #979F9F; 
+            font-family: $fontTextos;
+            font-size: $tamano-texto;
+            padding: 7px 10px;
+            width: 180px;    
+        }
+
+        input#suscribirse{
+            background: none;
+            border: none;
+            text-decoration: underline;
+            color: white;
+            font-family: $fontTextos;
+            font-size: $tamano-texto;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+
+
+
+                         }
+
+     #contenedorFooter3{
+        display: flex;
+        grid-column: 1/2;
+        grid-row: 3;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        text-align: left;
+        padding: 0 30px;
+
+        li{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            color: #ffffff;
+            list-style: none;
+            list-style-position: outside;
+            margin-bottom: 10px;
+                }
+                
+                a{
+                    font-family: $fontTextos;
+                    font-size: $tamano-texto;
+                    text-align: left;
+                    color: #ffffff;
+                    text-decoration: none;
+                    padding-right: 5px;
+                             }            
+            
+            
+            }
+
+     #lineaVerticalFooter1{
+               display: none;
+
+            }
+
+    #lineaVerticalFooter2{
+                display: none;
+ 
+             }           
+
+
+
+            }
+
+          
+@media only screen and (min-width: 768px) {   
+    footer{
+        background-color: #979F9F;
+        display: grid;
+        width: 100vw;
+        height: 200px;
+        grid-template-columns: 30vw 5vw 30vw 5vw 30vw;
+        grid-template-areas: 
+                            "contenedorFooter1 lineaVerticalFooter1 contenedorFooter2 lineaVerticalFooter2 contenedorFooter3";
+    
+        ul{
+            padding-left: 0;
+                            
+            }
+    
+         #contenedorFooter1{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            padding: 0 30px;
+            grid-column: 1/2;
+            grid-row: 1;
+    
+                li{
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 14px;
+                    color: #ffffff;
+                    list-style: none;
+                    list-style-position: outside;
+                    margin-bottom: 10px;
+                        }
+    
+                    a{
+                        font-family: $fontTextos;
+                        font-size: $tamano-texto;
+                        text-align: left;
+                        color: #ffffff;
+                        text-decoration: none;
+                        padding-right: 5px;
+                                 }
+                                 
+    
+                            }
+    
+         #contenedorFooter2{
+            display: flex;
+            grid-column: 3/4;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            padding: 0 30px;
+            grid-row: 1;
+    
+            h3{
+                font-size: $tamano-h3;
+                font-family: $fontTitulos;
+                margin: 0;
+                color: white;
+            }
+    
+            p{
+                color: white;
+            }
+    
+            input#email{
+                background: rgb(255, 255, 255);
+                border: none;
+                color: #979F9F; 
+                font-family: $fontTextos;
+                font-size: $tamano-texto;
+                padding: 7px 10px;
+                width: 180px;    
+            }
+    
+            input#suscribirse{
+                background: none;
+                border: none;
+                text-decoration: underline;
+                color: white;
+                font-family: $fontTextos;
+                font-size: $tamano-texto;
+                font-weight: 600;
+                margin-right: 10px;
+            }
+    
+    
+    
+                             }
+    
+         #contenedorFooter3{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            padding: 0 30px;
+            grid-column: 5/6;
+            grid-row: 1;
+    
+            li{
+                font-family: 'Montserrat', sans-serif;
+                font-size: 14px;
+                color: #ffffff;
+                list-style: none;
+                list-style-position: outside;
+                margin-bottom: 10px;
+                    }
+                    
+                    a{
+                        font-family: $fontTextos;
+                        font-size: $tamano-texto;
+                        text-align: left;
+                        color: #ffffff;
+                        text-decoration: none;
+                        padding-right: 5px;
+                                 }            
+                
+                
+                }
+    
+         #lineaVerticalFooter1{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    grid-column: 2/3;
+                    grid-row: 1;
+    
+                    .lineaVerticalFooter{
+                        border-left: 1.5px solid #ffffff;
+                        height: 150px;
+                        }
+    
+                }
+
+          #lineaVerticalFooter2{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    grid-column: 4/5;
+                    grid-row: 1;
+    
+                   .lineaVerticalFooter{
+                        border-left: 1.5px solid #ffffff;
+                        height: 150px;
+                        }
+    
+                }
+    
+    
+    
+    
+                }  
+}
