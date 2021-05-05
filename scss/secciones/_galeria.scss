@@ -45,6 +45,34 @@
         }
     }
 
+    #columnaGaleria1{
+        .bloqueFoto{
+        &__Img:hover{
+            transform: scale(2,2) translate(50%, 0%);
+            z-index: 1;
+        }
+        }
+    }
+
+    #columnaGaleria2{
+        .bloqueFoto{
+        &__Img:hover{
+            transform: scale(2,2) translate(0%, 0%);
+            z-index: 1;
+            
+        }
+        }
+    }
+
+    #columnaGaleria3{
+        .bloqueFoto{
+        &__Img:hover{
+            transform: scale(2,2) translate(-50%, 0%);
+            z-index: 1;
+            
+        }
+        }
+    }
 }
 
 @media (max-width:480px){

@@ -778,6 +778,15 @@ footer {
     #galeria .bloqueFoto__titulo {
       margin-top: 0;
       color: #979f9f; }
+  #galeria #columnaGaleria1 .bloqueFoto__Img:hover {
+    transform: scale(2, 2) translate(50%, 0%);
+    z-index: 1; }
+  #galeria #columnaGaleria2 .bloqueFoto__Img:hover {
+    transform: scale(2, 2) translate(0%, 0%);
+    z-index: 1; }
+  #galeria #columnaGaleria3 .bloqueFoto__Img:hover {
+    transform: scale(2, 2) translate(-50%, 0%);
+    z-index: 1; }
 
 @media (max-width: 480px) {
   #galeria {
