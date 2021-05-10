@@ -17,6 +17,13 @@
         text-decoration: underline;
     }
 
+    a:active {
+        color: $color-rosaviejo;
+        text-decoration: underline;
+    }
+
+    
+
 }
 
 /*HEADERS*/  
@@ -351,4 +358,8 @@ footer{
     
     
                 }  
+}
+
+.navbar-light .navbar-toggler{
+    border: none;
 }

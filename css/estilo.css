@@ -17,6 +17,9 @@
   #menuBootstrap a:hover {
     color: #c6aa9d;
     text-decoration: underline; }
+  #menuBootstrap a:active {
+    color: #c6aa9d;
+    text-decoration: underline; }
 
 /*HEADERS*/
 .headers, .main #headerServicios, .nosotras #headernosotras, #headerGaleria {
@@ -247,6 +250,9 @@ footer {
       footer #lineaVerticalFooter2 .lineaVerticalFooter {
         border-left: 1.5px solid #ffffff;
         height: 150px; } }
+
+.navbar-light .navbar-toggler {
+  border: none; }
 
 #serviciosHome {
   display: grid;
@@ -839,12 +845,220 @@ footer {
     grid-column: 2/4;
     grid-row: 1;
     background-color: #edebe9;
-    padding: 50px; }
+    padding: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #4c4c4c; }
+    #contacto #contenedorFormulario #formulario #form {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      /* Style the arrow inside the select element: */
+      /* Point the arrow upwards when the select box is open (active): */
+      /* style the items (options), including the selected item: */
+      /* Style items (options): */
+      /* Hide the items when the select box is closed: */ }
+      #contacto #contenedorFormulario #formulario #form__nombre {
+        grid-column: 1/2;
+        grid-row: 1;
+        display: flex;
+        flex-direction: column; }
+      #contacto #contenedorFormulario #formulario #form__apellido {
+        grid-column: 2/3;
+        grid-row: 1;
+        display: flex;
+        flex-direction: column; }
+      #contacto #contenedorFormulario #formulario #form__email {
+        grid-column: 1/2;
+        grid-row: 2;
+        display: flex;
+        flex-direction: column; }
+      #contacto #contenedorFormulario #formulario #form__telefono {
+        grid-column: 2/3;
+        grid-row: 2;
+        display: flex;
+        flex-direction: column; }
+      #contacto #contenedorFormulario #formulario #form__evento {
+        grid-column: 1/2;
+        grid-row: 3;
+        display: flex;
+        flex-direction: column; }
+      #contacto #contenedorFormulario #formulario #form__invitados {
+        grid-column: 2/3;
+        grid-row: 3;
+        display: flex;
+        flex-direction: column; }
+      #contacto #contenedorFormulario #formulario #form__consulta {
+        grid-column: 1/3;
+        grid-row: 4;
+        display: flex;
+        flex-direction: column; }
+      #contacto #contenedorFormulario #formulario #form__newsletter {
+        grid-column: 1/3;
+        grid-row: 5;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        /* Customize the label (the container) */
+        /* Hide the browser's default checkbox */
+        /* Create a custom checkbox */
+        /* On mouse-over, add a grey background color */
+        /* When the checkbox is checked, add a blue background */
+        /* Create the checkmark/indicator (hidden when not checked) */
+        /* Show the checkmark when checked */
+        /* Style the checkmark/indicator */ }
+        #contacto #contenedorFormulario #formulario #form__newsletter .container {
+          display: block;
+          position: relative;
+          padding-left: 35px;
+          margin-bottom: 12px;
+          cursor: pointer;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none; }
+        #contacto #contenedorFormulario #formulario #form__newsletter .container input {
+          position: absolute;
+          opacity: 100;
+          cursor: pointer;
+          height: 0;
+          width: 0; }
+        #contacto #contenedorFormulario #formulario #form__newsletter .checkmark {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 25px;
+          width: 25px;
+          background-color: #eee;
+          border-radius: 5px;
+          border: 2px solid #c6aa9d; }
+        #contacto #contenedorFormulario #formulario #form__newsletter .container:hover input ~ .checkmark {
+          background-color: #ccc; }
+        #contacto #contenedorFormulario #formulario #form__newsletter .container input:checked ~ .checkmark {
+          background-color: #c6aa9d; }
+        #contacto #contenedorFormulario #formulario #form__newsletter .checkmark:after {
+          content: "";
+          position: absolute;
+          display: none; }
+        #contacto #contenedorFormulario #formulario #form__newsletter .container input:checked ~ .checkmark:after {
+          display: block; }
+        #contacto #contenedorFormulario #formulario #form__newsletter .container .checkmark:after {
+          left: 9px;
+          top: 5px;
+          width: 5px;
+          height: 10px;
+          border: solid white;
+          border-width: 0 3px 3px 0;
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg); }
+      #contacto #contenedorFormulario #formulario #form__enviar {
+        grid-column: 1/3;
+        grid-row: 6;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: row; }
+        #contacto #contenedorFormulario #formulario #form__enviar .tamanoBoton input {
+          border-radius: 10px;
+          margin-left: 15px;
+          transition: all 1s; }
+        #contacto #contenedorFormulario #formulario #form__enviar #botonEnviar input {
+          background-color: #c6aa9d;
+          border: 2px solid #c6aa9d;
+          color: white;
+          padding: 10px 30px; }
+        #contacto #contenedorFormulario #formulario #form__enviar #botonEnviar input:hover {
+          background-color: #9b8277;
+          color: white;
+          border: none;
+          border: 2px solid #9b8277; }
+        #contacto #contenedorFormulario #formulario #form__enviar #botonReset input {
+          color: #c6aa9d;
+          border: 2px solid #c6aa9d;
+          padding: 10px 20px; }
+        #contacto #contenedorFormulario #formulario #form__enviar #botonReset input:hover {
+          background-color: #9b8277;
+          color: white;
+          border: none;
+          border: 2px solid #9b8277; }
+      #contacto #contenedorFormulario #formulario #form .formRegion {
+        padding: 10px; }
+      #contacto #contenedorFormulario #formulario #form input {
+        border: 0;
+        font-size: 0.8em;
+        font-weight: 500;
+        border-bottom: solid 2px #c6aa9d;
+        background-color: #edebe9;
+        text-transform: capitalize;
+        color: #c6aa9d;
+        padding: 8px 0; }
+      #contacto #contenedorFormulario #formulario #form input::placeholder {
+        font-weight: 200;
+        color: #c6aa9d; }
+      #contacto #contenedorFormulario #formulario #form textarea {
+        border: solid 2px #c6aa9d;
+        background-color: #edebe9;
+        border-radius: 10px;
+        color: #c6aa9d;
+        font-size: 0.8em;
+        font-weight: 500;
+        padding: 10px;
+        margin-top: 10px; }
+      #contacto #contenedorFormulario #formulario #form textarea::placeholder {
+        font-weight: 200;
+        color: #c6aa9d; }
+      #contacto #contenedorFormulario #formulario #form .custom-select {
+        position: relative;
+        font-family: "Montserrat", sans-serif;
+        width: 100%;
+        color: lightgrey !important; }
+      #contacto #contenedorFormulario #formulario #form .custom-select select {
+        display: none;
+        /*hide original SELECT element: */ }
+      #contacto #contenedorFormulario #formulario #form .select-selected {
+        background-color: #edebe9;
+        color: #c6aa9d; }
+      #contacto #contenedorFormulario #formulario #form .seleccion-item {
+        color: white; }
+      #contacto #contenedorFormulario #formulario #form .select-items {
+        color: white !important;
+        padding: 8px 16px; }
+      #contacto #contenedorFormulario #formulario #form .select-selected:after {
+        position: absolute;
+        content: "";
+        top: 14px;
+        right: 10px;
+        width: 0;
+        height: 0;
+        border: 6px solid transparent;
+        border-color: #c6aa9d transparent transparent transparent; }
+      #contacto #contenedorFormulario #formulario #form .select-selected.select-arrow-active:after {
+        border-color: transparent transparent #c6aa9d transparent;
+        top: 7px; }
+      #contacto #contenedorFormulario #formulario #form .select-items div, #contacto #contenedorFormulario #formulario #form .select-selected {
+        font-size: 0.8em;
+        padding: 8px 16px 8px 0;
+        border-bottom: 2px solid #c6aa9d;
+        border-color: #c6aa9d;
+        cursor: pointer; }
+      #contacto #contenedorFormulario #formulario #form .select-items {
+        position: absolute;
+        background-color: #c6aa9d;
+        color: white;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 99; }
+      #contacto #contenedorFormulario #formulario #form .select-hide {
+        display: none; }
+      #contacto #contenedorFormulario #formulario #form .select-items div:hover, #contacto #contenedorFormulario #formulario #form .same-as-selected {
+        background-color: rgba(54, 54, 54, 0.1); }
   #contacto #contenedorFormulario #datosContacto {
     grid-column: 4/5;
     grid-row: 1;
     background-color: #c6aa9d;
-    padding: 50px 40px; }
+    padding: 60px 40px; }
     #contacto #contenedorFormulario #datosContacto #infoContacto {
       padding-left: 0; }
       #contacto #contenedorFormulario #datosContacto #infoContacto li {
@@ -953,6 +1167,8 @@ footer {
       font-size: 1.2em; }
 
 @media (min-width: 761px) and (max-width: 1024px) {
+  #contacto #contenedorFormulario {
+    grid-template-columns: 8% repeat(3, 1fr) 8%; }
   #contacto #contenedorPreguntas {
     grid-template-columns: 10% repeat(6, 1fr) 10%; }
     #contacto #contenedorPreguntas #pregunta1 {
@@ -975,12 +1191,46 @@ footer {
       grid-row: 4; } }
 
 @media (max-width: 760px) {
+  #contacto #headerContacto {
+    justify-content: center;
+    padding-top: 0; }
+    #contacto #headerContacto h1 {
+      font-size: 4em; }
+    #contacto #headerContacto p {
+      padding: 5px 10%; }
   #contacto #contenedorFormulario {
     margin-top: 0;
     grid-template-columns: 100%; }
     #contacto #contenedorFormulario #formulario {
-      grid-column: 1/2;
+      grid-column: 1/3;
       grid-row: 1; }
+      #contacto #contenedorFormulario #formulario #form__nombre {
+        grid-column: 1/3;
+        grid-row: 1; }
+      #contacto #contenedorFormulario #formulario #form__apellido {
+        grid-column: 1/3;
+        grid-row: 2; }
+      #contacto #contenedorFormulario #formulario #form__email {
+        grid-column: 1/3;
+        grid-row: 3; }
+      #contacto #contenedorFormulario #formulario #form__telefono {
+        grid-column: 1/3;
+        grid-row: 4; }
+      #contacto #contenedorFormulario #formulario #form__evento {
+        grid-column: 1/3;
+        grid-row: 5; }
+      #contacto #contenedorFormulario #formulario #form__invitados {
+        grid-column: 1/3;
+        grid-row: 6; }
+      #contacto #contenedorFormulario #formulario #form__consulta {
+        grid-column: 1/3;
+        grid-row: 7; }
+      #contacto #contenedorFormulario #formulario #form__newsletter {
+        grid-column: 1/3;
+        grid-row: 8; }
+      #contacto #contenedorFormulario #formulario #form__enviar {
+        grid-column: 1/3;
+        grid-row: 9; }
     #contacto #contenedorFormulario #datosContacto {
       grid-column: 1/2;
       grid-row: 2; }
