@@ -2,7 +2,7 @@
 #headerGaleria{
     @extend .headers;
     background-image: linear-gradient(179deg, rgba(198,170,158,0.5) 0%, rgba(232,219,212,0.5) 100%), url("../FOTOS/header-nosotras.jpg");
-
+    margin-bottom: 0;
 }
 
 #galeria{
@@ -107,3 +107,106 @@
         }
     }
 }
+
+//PRUEBA 2
+.bloqueFoto{
+    display: flex;
+    width: 33.3%;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    padding-bottom: 20px;
+
+    &__Img{
+        width: 100%;
+        margin: 20px 0;
+        vertical-align: middle;
+        transition: all 2s;
+    }
+
+    &__categoria{
+        font-size: 12px;
+        margin: 0;
+    }
+
+    &__titulo{
+        margin-top: 0;
+        color: #979f9f;
+    }
+} 
+
+.gallery{
+    min-height: 100vh;
+    padding: 50px 0 100px 0;
+    transition:all .2s cubic-bezier(.34,1.12,.68,1.31);
+    
+}
+
+.gallery .controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:20px 0;
+    list-style: none;
+}
+
+.gallery .controls .buttons{
+    height:40px;
+    width: 140px;
+    border: solid 1px #c6aa9d;
+    color:#c6aa9d;
+    border-radius: 5px;
+    line-height: 40px;
+    cursor: pointer;
+    margin:20px;
+    text-align: center;
+    font-family: $fontTextos;
+    font-size: 1em;
+    transition: all 1s;
+}
+
+.gallery .controls .buttons.active{
+    background:#c6aa9d;
+    color:#fff;
+}
+
+.gallery .controls .buttons:hover{
+    background:#c6aa9d;
+    color:#fff;
+}
+
+.gallery .image-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery .image-container .image{
+    height:250px;
+    width: 350px;
+    overflow: hidden;
+    margin: 20px;
+    
+    
+}
+
+.gallery .image-container .image img{
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+    transition: all 1s;
+    filter: grayscale(100%);
+}
+
+.gallery .image-container .image:hover img{
+    transform: scale(1.2);
+    filter: grayscale(0%);
+}
+
+
+
+
+
+

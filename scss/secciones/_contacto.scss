@@ -12,6 +12,7 @@
         align-items: center;
         justify-content: start;
         padding-top: 50px;
+        
 
         .lineaHeader{
             height: 1px;
@@ -418,8 +419,8 @@
             }
                 
             &__fondoNumero{
-                    width: 40px;
-                    height: 40px;
+                    width: 30px;
+                    height: 30px;
                     border-radius: 50%;
                     background-color: #c6aa9d;;
                     text-transform: uppercase;
@@ -435,7 +436,7 @@
                         margin: 0;
                         font-family: 'Montserrat', sans-serif;
                         font-weight: 600;
-                        font-size: 1.1em;
+                        font-size: 1em !important;
                     }
             
 

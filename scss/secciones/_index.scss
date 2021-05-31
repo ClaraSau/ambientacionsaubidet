@@ -1,3 +1,130 @@
+.carousel {
+    margin-bottom: 4rem;
+  
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+    bottom: 11rem;
+    z-index: 10;
+
+    h1{
+        text-shadow: 0px 0px 30px #00000036;
+    }
+
+    #textoSlider{
+        text-shadow: 0px 0px 30px #0000008c;
+        font-weight: 400;
+    }
+
+    p{
+        color: white;
+        width: 60%;
+        
+    }
+
+  }
+  
+  /* Declare heights because of positioning of img element */
+  .carousel-item {
+    height: 40rem;
+    
+  }
+  .carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: auto;
+    
+  }
+
+  #capaNegra{
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .btn-primary{
+      background-color: $color-rosaviejo;
+      border-color: $color-rosaviejo;
+      transition: all 1s;
+  }
+
+  .btn-lg{
+      padding: .5rem 3rem;
+      font-size: 1.1rem;
+  }
+
+  .btn-primary:hover{
+    background-color: $color-gris;
+    border-color: $color-gris;
+    transform: scale(1.1,1.1);
+}
+}
+
+@media only screen and (max-width: 768px) {
+  .carousel {
+    .w-100{
+        width: auto!important;     
+    }
+
+    .carousel-item {
+        height: 40rem;
+        
+      }
+      .carousel-item > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        height: 100%;
+        
+      }
+      .carousel-caption {
+        bottom: 0;
+        top: 11rem;
+        z-index: 10;
+
+    h1{
+        text-shadow: 0px 0px 30px #00000036;
+        font-size: 3em;
+    }
+
+    #textoSlider{
+        text-shadow: 0px 0px 30px #0000008c;
+        font-weight: 400;
+        width: 100%;
+    }
+
+    p{
+        color: white;
+        width: 60%;
+        
+    }
+
+    
+  
+    .btn-lg{
+        padding: .5rem 2rem;
+        
+    }
+    }
+ }
+}
+
+@media only screen and (min-width: 769px) and (max-width:1374px){
+    .carousel{
+        .carousel-item > img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            
+          }
+
+          .w-100{
+            width: 0!important;     
+        }
+    } 
+}
+
 
 #serviciosHome {
     display: grid;
@@ -19,7 +146,7 @@
     .seccionServicios{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
         text-align: center;
         padding: 0 5%;
@@ -69,9 +196,9 @@
 @media only screen and (min-width: 768px) {
 #serviciosHome {
     display: grid;
-    grid-template-columns: 1fr repeat(3, 30%) 1fr;
-    grid-template-rows: 300px 350px 200px;
-    margin-top: 50px;
+    grid-template-columns: 1fr repeat(3, 25%) 1fr;
+    margin-top: 0;
+    
 
     #tituloMedioServicios{
         grid-column: 2/5;

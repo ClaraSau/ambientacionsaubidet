@@ -1,0 +1,319 @@
+//LINEA CORTA AL MEDIO
+.lineaCortaMedio{
+    width: 50px;
+            border: 1px solid #c6aa9d;
+            margin: 20px 0;
+            opacity: 1;
+}
+
+
+
+
+
+/*BOTONES*/  
+.boton{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 0;
+
+&__link{
+        color: #c6aa9d;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        text-decoration: none;
+        border: 1px solid #c6aa9d;
+        padding: 9px 70px;
+        text-align: center;
+        transition: all 1s;
+        border-radius: 5px;
+}
+
+&__link:hover{
+    background-color:  #c6aa9d;
+    color: white;
+    transform: scale(1.1,1.1);
+}
+}
+
+//TEXTO PRINCIPAL TIPOS DE SERVICIOS
+.textoPrincipal{
+    padding: 8% 23%;
+    text-align: justify;
+    font-size: 1.1em;
+}
+
+@media only screen and (max-width: 760px){
+    .textoPrincipal{
+        padding: 8% 10%;
+        text-align: left; 
+    }
+}
+
+@media only screen and (min-width:761px) and (max-width:1024px){
+    .textoPrincipal{
+        padding: 8% 10%;
+        
+    }
+}
+
+//BLOQUE DIVIDIDO 2: TIPOS DE SERVICIOS
+.bloqueDividido{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &__izquierda{
+        grid-column: 1/2;
+        grid-row: 1;
+        display: flex;
+        
+    }
+
+    &__derecha{
+        grid-column: 2/3;
+        grid-row: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        background: linear-gradient(90deg, #e3dede 0%, #f9f4eb 100%);
+        padding: 15%;
+
+        h2{
+            color: $color-gris;
+        }
+
+        hr{
+            width: 50px;
+            border: 1px solid #c6aa9d;
+            margin: 20px 0;
+            opacity: 1;
+        }
+
+        ul{
+            font-family: $fontTextos;
+            font-size: $tamano-texto;
+            color: $color-gris;
+            
+        }
+    }
+
+    #izquierdaCasamientos{
+        background-image: url('/FOTOS/servicios-casamientos-2.jpg');
+            
+    }
+    
+    #izquierdaCorporativo{
+        background-image: url('/FOTOS/servicios-corporativos-1.jpg');
+        
+    }
+    
+    #izquierdaSociales{
+        background-image: url('/FOTOS/servicios-sociales-1.jpg');
+        
+    }
+}
+
+@media only screen and (max-width: 760px){
+    .bloqueDividido{
+        grid-template-columns: 100%;
+
+        &__izquierda{
+            grid-column: 1/2;
+            grid-row: 1;
+            height: 300px;
+            background-position: center;
+            background-size: cover;
+            background-attachment: none;
+
+        }
+
+        &__derecha{
+            grid-column: 1/2;
+            grid-row: 2;
+            height: auto;
+            padding: 10%;
+            
+        }
+
+        #izquierdaCasamientos, #izquierdaSociales, #izquierdaCorporativo{
+            background-position: center;
+            background-size: cover;
+            background-attachment: none !important;
+        }
+    }
+
+}
+
+@media only screen and (min-width:761px) and (max-width:1024px){
+    .bloqueDividido{
+        grid-template-columns: 1fr 2fr;
+
+        &__izquierda{
+            grid-column: 1/2;
+            grid-row: 1;
+            background-attachment: none !important;
+            
+
+        }
+
+        &__derecha{
+            grid-column: 2/3;
+            grid-row: 1;
+            height: auto;
+            padding: 7%;
+            
+        }
+
+        #izquierdaCasamientos, #izquierdaSociales, #izquierdaCorporativo{
+            background-position: center;
+            background-size: cover;
+            background-attachment: none !important;
+        }
+    }
+}
+
+@media only screen and (min-width:1024px){
+    .bloqueDividido{
+        #izquierdaCasamientos, #izquierdaSociales, #izquierdaCorporativo{
+            background-position: left center;
+            background-size: 50%;
+            background-attachment: fixed;
+        }
+    }
+}
+
+//TESTIMONIOS
+.contenedorTestimonios{
+    display: grid;
+    grid-template-columns: 10% repeat(4, 1fr) 10%;
+    grid-template-rows: auto;
+    padding: 8% 0;
+
+    .testimoniosTitulo{
+        grid-column: 2/6;
+        grid-row: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 50px 0;
+    }
+
+
+    .testimonio{
+        padding: 10px;
+
+        &__estrellas{
+            color:  #c6aa9d;;
+        }
+
+        &__titulo{
+            font-weight: 500 ;
+            font-size: 24px;
+            color: $color-grisoscuro;
+        }
+
+        &__texto{
+            font-style: italic;
+            font-size: $tamano-texto;
+            line-height: 1.5em;
+        }
+
+        &__nombres{
+            color: black;
+            font-size: 17px;
+            font-weight: 400;
+        }
+    }
+      
+
+
+    .testimonio1{
+        grid-column: 2/3;
+        grid-row: 2;
+        
+    }
+
+    .testimonio2{
+        grid-column: 3/4 ;
+        grid-row: 2 ;
+        
+    }
+
+    .testimonio3{
+        grid-column: 4/5 ;
+        grid-row: 2 ;
+        
+    }
+
+    .testimonio4{
+        grid-column: 5/6;
+        grid-row: 2;
+        
+    }
+
+
+
+}
+
+@media only screen and (min-width:761px) and (max-width:1024px){
+
+    .contenedorTestimonios{
+        .testimonio1{
+            grid-column: 2/4;
+            grid-row: 2;
+            
+        }
+        
+        .testimonio2{
+            grid-column: 4/6 ;
+            grid-row: 2 ;
+            
+        }
+        
+        .testimonio3{
+            grid-column: 2/4 ;
+            grid-row: 3 ;
+            
+        }
+        
+        .testimonio4{
+            grid-column: 4/6;
+            grid-row: 3;
+            
+        }
+    }
+
+}
+
+@media only screen and (max-width: 760px){
+.contenedorTestimonios{
+    .testimonio1{
+        grid-column: 2/6;
+        grid-row: 2;
+        
+    }
+    
+    .testimonio2{
+        grid-column: 2/6 ;
+        grid-row: 3 ;
+        
+    }
+    
+    .testimonio3{
+        grid-column: 2/6 ;
+        grid-row: 4 ;
+        
+    }
+    
+    .testimonio4{
+        grid-column: 2/6;
+        grid-row: 5;
+        
+    }
+}
+}

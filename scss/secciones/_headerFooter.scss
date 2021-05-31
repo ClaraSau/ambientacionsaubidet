@@ -17,12 +17,10 @@
         text-decoration: underline;
     }
 
-    a:active {
+    .active {
         color: $color-rosaviejo;
         text-decoration: underline;
-    }
-
-    
+    } 
 
 }
 
@@ -31,6 +29,7 @@
     height: 450px;
     background-position: center; 
     background-size: cover;
+    background-attachment: fixed;
     color: white;
     display: flex;
     flex-direction: column;
@@ -57,8 +56,18 @@
         margin: 10px 0;
     }
 
-    
+}
 
+@media only screen and (max-width: 768px){
+    .headers{
+        &__titulo{
+           font-size: 3.5em; 
+        }
+
+        &__texto{
+            padding: 0 10%;
+        }
+    }
 }
 
 
@@ -130,15 +139,18 @@ footer{
             color: white;
         }
 
-        input#email{
+        input.email{
             background: rgb(255, 255, 255);
             border: none;
+            border-radius: 5px;
             color: #979F9F; 
             font-family: $fontTextos;
-            font-size: $tamano-texto;
+            font-size: 0.8em;
             padding: 7px 10px;
-            width: 180px;    
+            width: 60%;    
         }
+
+        
 
         input#suscribirse{
             background: none;
@@ -148,7 +160,7 @@ footer{
             font-family: $fontTextos;
             font-size: $tamano-texto;
             font-weight: 600;
-            margin-right: 10px;
+            margin-left: 10px;
         }
 
 
@@ -268,15 +280,17 @@ footer{
                 color: white;
             }
     
-            input#email{
+            input.email{
                 background: rgb(255, 255, 255);
                 border: none;
                 color: #979F9F; 
                 font-family: $fontTextos;
                 font-size: $tamano-texto;
                 padding: 7px 10px;
-                width: 180px;    
+                width: 100%;    
             }
+
+            
     
             input#suscribirse{
                 background: none;
@@ -286,7 +300,8 @@ footer{
                 font-family: $fontTextos;
                 font-size: $tamano-texto;
                 font-weight: 600;
-                margin-right: 10px;
+                margin-left: 0px;
+                padding-top: 15px;
             }
     
     
@@ -362,4 +377,45 @@ footer{
 
 .navbar-light .navbar-toggler{
     border: none;
+}
+
+
+@media only screen and (min-width: 992px){
+  
+    #menuBootstrap{
+        .dropdown-menu {display: block;visibility: hidden;opacity:0;transform: translateY(-40px);transition:.6s ease all;}
+            .dropdown-menu.show {display: block;visibility: visible;opacity:1;transform: translateY(0px);transition:.6s ease all;}
+
+        #menuDesplegable{
+            border: none;
+            padding: 0;
+            margin-top: 2rem;
+
+            a{
+                padding: 1rem 1rem;
+            }
+
+            a:hover{
+                background-color: $color-rosaviejo;
+                color: white;
+                text-decoration: none;
+            }
+
+            
+        }
+
+    }
+}
+
+@media only screen and (max-width:992px){
+    #menuDesplegable{
+        border: none;
+        padding: 0;
+        
+
+        a{
+            padding: .5rem 0 .5rem 3rem;
+        }
+  
+    }
 }

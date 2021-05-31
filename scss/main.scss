@@ -13,6 +13,7 @@
 @import 'secciones/_nosotras.scss';
 @import 'secciones/_galeria.scss';
 @import 'secciones/_contacto.scss';
+@import 'variables/piezas.scss';
 
 
 body{
@@ -66,33 +67,6 @@ h5{
     margin: 0;
 }
 
-/*BOTONES*/  
-.boton{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 30px 0;
 
-    &__link{
-            color: #c6aa9d;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 14px;
-            text-decoration: none;
-            border: 1px solid #c6aa9d;
-            transition-duration: .25s;
-            padding: 9px 70px;
-            text-align: center;
-            transition: all 1s;
-            border-radius: 5px;
-    }
-
-    &__link:hover{
-        background-color:  #c6aa9d;
-        color: white;
-        transform: scale(1.2,1.2);
-    }
-}
 
   

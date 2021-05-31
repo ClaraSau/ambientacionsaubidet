@@ -1,3 +1,17 @@
+.navbar .nav-item:not(:last-child) {
+    margin-right: 35px;
+  }
+   
+  .dropdown-toggle::after {
+     transition: transform 0.15s linear; 
+  }
+   
+  .show.dropdown .dropdown-toggle::after {
+    transform: translateY(3px);
+  }
+
+
+
 .nosotras{
     display: flex;
     flex-direction: column;
@@ -51,95 +65,22 @@
             hr{
                 width: 50px;
                 border: 1px solid #c6aa9d;
-                margin: 5px 0;
-            }
-
-            .lineaCortaMedio{
-                width: 50px;
-                border: 1px solid #c6aa9d;
-                margin: 5px 0;
+                margin: 20px 0;
                 opacity: 1;
             }
+
+            
         
             
         }
     }
     
-    #contenedorTestimonios{
-            display: grid;
-            grid-template-columns: 10% repeat(4, 1fr) 10%;
-            grid-template-rows: auto;
-            background: linear-gradient(90deg, rgba(227,222,222,1) 0%, rgba(249,244,235,1) 100%);
-            margin-top: 50px;
-            padding: 50px 0;
-
-            .testimoniosTitulo{
-                grid-column: 2/6;
-                grid-row: 1;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                margin: 50px 0;
-            }
-
-            .testimonio{
-                padding: 10px 10px 50px 10px;
-
-                &__estrellas{
-                    color:  #c6aa9d;;
-                }
-
-                &__titulo{
-                    font-weight: 500 ;
-                    font-size: 24px;
-                    color: $color-grisoscuro;
-                }
-
-                &__texto{
-                    font-style: italic;
-                    font-size: $tamano-texto;
-                    line-height: 1.5em;
-                }
-
-                &__nombres{
-                    color: black;
-                    font-size: 17px;
-                    font-weight: 400;
-                }
-            }
-              
-        
-
-        #testimonio1{
-            grid-column: 2/3;
-            grid-row: 2;
-            
-        }
-        
-        #testimonio2{
-            grid-column: 3/4 ;
-            grid-row: 2 ;
-            
-        }
-        
-        #testimonio3{
-            grid-column: 4/5 ;
-            grid-row: 2 ;
-            
-        }
-        
-        #testimonio4{
-            grid-column: 5/6;
-            grid-row: 2;
-            
-        }
-
-        
     
-    }
 }
+
+/* CAROUSEL LOGOS */
+
+
 
 @media (min-width:761px) and (max-width:1024px){
 
@@ -215,7 +156,7 @@
 
             .textoDerecha{
                 height: auto;
-                padding-top: 50px;
+                padding: 50px 0;
                 align-items: center;
 
                 h2, p{

@@ -7,7 +7,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/estilo.css">
+        <link rel="stylesheet" href="/css/estilo.css">
         <script src="https://kit.fontawesome.com/57243c7a74.js" crossorigin="anonymous"></script>
         
         <title>DB AMBIENTACIONES | CONTACTO</title>
@@ -18,35 +18,43 @@
 <body>
     <!--MENU-->
     <header class="header">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="menuBootstrap">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="index.html"><img src="FOTOS/logo-dbambientaciones-2.jpg" alt="Imagen Logo DB Ambientaciones" width="120"></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="servicios.html">Servicios</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="nosotras.html">Nosotras</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="galeria.html">Galería</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contacto.html">Contacto</a>
-                  </li>
-                </ul>
-                
-              </div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" id="menuBootstrap">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="/index.html"><img src="/FOTOS/logo-dbambientaciones-2.jpg" alt="Imagen Logo DB Ambientaciones" width="120"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="/index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="/htmls/servicios.html" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Servicios
+                  </a>
+                  <div class="dropdown-menu" id="menuDesplegable" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="/htmls/casamientos.html">Casamientos</a>
+                    <a class="dropdown-item" href="/htmls/eventos-corporativos.html">Eventos Corporativos</a>
+                    <a class="dropdown-item" href="/htmls/eventos-sociales.html">Eventos Sociales</a>
+                    <a class="dropdown-item" href="/htmls/servicios.html">Soluciones</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/htmls/nosotras.html">Nosotras</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/htmls/galeria.html">Galería</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="/htmls/contacto.html">Contacto</a>
+                </li>
+              </ul>
+              
             </div>
-          </nav>
-    </header>
+          </div>
+        </nav>
+  </header>
     
     
     <!--CUERPO-->
@@ -86,9 +94,9 @@
                     <div class="custom-select">
                     <select name="evento" id="evento" class="botonSeleccionar">
                     <option value="0" >Seleccionar Evento</option>
-                    <option value="1" class="seleccion-item">Evento Corporativo</option>
-                    <option value="2" class="seleccion-item">Ceremonia</option>
-                    <option value="3" class="seleccion-item">DB en Casa</option>
+                    <option value="1" class="seleccion-item">Casamiento</option>
+                    <option value="2" class="seleccion-item">Corporativo</option>
+                    <option value="3" class="seleccion-item">Social</option>
                     </select>
                     </div>
                 </div>
@@ -145,7 +153,7 @@
               <h6>Consultas</h6>
               <hr class="lineaCortaMedio">
               <h2>Preguntas Frecuentes</h2>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, eaque nam vitae pariatur esse ipsum. Libero, at molestias minima expedita modi, itaque eveniet quam eos debitis rem quod. Nesciunt, odio?</p>
+              <p>Te dejamos algunas consultas que nos hacen bastante seguido. Esperemos que te sirvan! De todas maneras no dudes de mandarnos tu consulta por mail! Te responderemos a la brevedad.</p>
           </div>
   
           <div class="preguntas" id="pregunta1">
@@ -158,7 +166,7 @@
                   <h4 class="preguntas__titulo1">Cuáles son las formas de pago?</h4>
               </div>
               <div class="preguntas__texto">
-                <p class="preguntas__texto1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, eaque nam vitae pariatur esse ipsum. Libero, at molestias minima expedita modi, itaque eveniet quam eos debitis rem quod. Nesciunt, odio?</p>
+                <p class="preguntas__texto1">Los medios de pago son: MarcadoPago, Tarjeta de Crédito y Débito. Una vez hecha la seña del 50% el precio se congela.</p>
               </div>
           </div>
   
@@ -172,7 +180,7 @@
                 <h4 class="preguntas__titulo1">¿Cuáles son las políticas de cancelación</h4>
             </div>
             <div class="preguntas__texto">
-                <p class="preguntas__texto1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, eaque nam vitae pariatur esse ipsum. Libero, at molestias minima expedita modi, itaque eveniet quam eos debitis rem quod. Nesciunt, odio?</p>
+                <p class="preguntas__texto1">Se puede cancelar hasta máximo 15 días antes de la fecha. En el contrato se especificarán las políticas de cancelación.</p>
             </div>
         </div>
   
@@ -183,10 +191,10 @@
                 </div>
             </div>
             <div class="preguntas__titulo">
-                <h4 class="preguntas__titulo1">¿Cambia el precio si el evento es de día o de noche?</h4>
+                <h4 class="preguntas__titulo1">¿Cambia el precio si se hace de día o de noche?</h4>
             </div>
             <div class="preguntas__texto">
-                <p class="preguntas__texto1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, eaque nam vitae pariatur esse ipsum. Libero, at molestias minima expedita modi, itaque eveniet quam eos debitis rem quod. Nesciunt, odio?</p>
+                <p class="preguntas__texto1">No! Que el evento sea de día o de noche no cambia. Lo que hace que cambie el precio depende de la cantidad de elementos que se deseen. </p>
             </div>
         </div>
   
@@ -200,7 +208,7 @@
                 <h4 class="preguntas__titulo1">Se encargan de la disposición de mesas?</h4>
             </div>
             <div class="preguntas__texto">
-                <p class="preguntas__texto1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, eaque nam vitae pariatur esse ipsum. Libero, at molestias minima expedita modi, itaque eveniet quam eos debitis rem quod. Nesciunt, odio?</p>
+                <p class="preguntas__texto1">Obvio! Para eso estamos! De todas maneras todo va a ser consultado con el cliente para confirmar si la dispocición está correcta.</p>
             </div>
         </div>
   
@@ -214,7 +222,7 @@
                 <h4 class="preguntas__titulo1">En algún caso hay que pagar un extra?</h4>
             </div>
             <div class="preguntas__texto">
-                <p class="preguntas__texto1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, eaque nam vitae pariatur esse ipsum. Libero, at molestias minima expedita modi, itaque eveniet quam eos debitis rem quod. Nesciunt, odio?</p>
+                <p class="preguntas__texto1">Generalmente hay u precio de base. Luego, todo lo que uno quiera que sea adicional, tiene un plus.</p>
             </div>
         </div>
   
@@ -228,7 +236,7 @@
                 <h4 class="preguntas__titulo1">Dónde son las reuniones?</h4>
             </div>
             <div class="preguntas__texto">
-                <p class="preguntas__texto1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, eaque nam vitae pariatur esse ipsum. Libero, at molestias minima expedita modi, itaque eveniet quam eos debitis rem quod. Nesciunt, odio?</p>
+                <p class="preguntas__texto1">Las reuniones pueden ser en nuestra oficina ubicada en Recoleta, CABA, o podemos coordinar para reunirnos en lo del cliente.</p>
             </div>
         </div>
   

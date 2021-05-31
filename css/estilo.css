@@ -17,15 +17,16 @@
   #menuBootstrap a:hover {
     color: #c6aa9d;
     text-decoration: underline; }
-  #menuBootstrap a:active {
+  #menuBootstrap .active {
     color: #c6aa9d;
     text-decoration: underline; }
 
 /*HEADERS*/
-.headers, .main #headerServicios, .nosotras #headernosotras, #headerGaleria {
+.headers, .main #headerServicios, .main #headerCorporativos, .main #headerSociales, .main #headerCasamientos, .nosotras #headernosotras, #headerGaleria {
   height: 450px;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   color: white;
   display: flex;
   flex-direction: column;
@@ -45,6 +46,12 @@
     color: white;
     text-align: center;
     margin: 10px 0; }
+
+@media only screen and (max-width: 768px) {
+  .headers__titulo {
+    font-size: 3.5em; }
+  .headers__texto {
+    padding: 0 10%; } }
 
 /*FOOTER*/
 footer {
@@ -96,14 +103,15 @@ footer {
       color: white; }
     footer #contenedorFooter2 p {
       color: white; }
-    footer #contenedorFooter2 input#email {
+    footer #contenedorFooter2 input.email {
       background: white;
       border: none;
+      border-radius: 5px;
       color: #979F9F;
       font-family: "Montserrat", sans-serif;
-      font-size: 0.9em;
+      font-size: 0.8em;
       padding: 7px 10px;
-      width: 180px; }
+      width: 60%; }
     footer #contenedorFooter2 input#suscribirse {
       background: none;
       border: none;
@@ -112,7 +120,7 @@ footer {
       font-family: "Montserrat", sans-serif;
       font-size: 0.9em;
       font-weight: 600;
-      margin-right: 10px; }
+      margin-left: 10px; }
   footer #contenedorFooter3 {
     display: flex;
     grid-column: 1/2;
@@ -190,14 +198,14 @@ footer {
         color: white; }
       footer #contenedorFooter2 p {
         color: white; }
-      footer #contenedorFooter2 input#email {
+      footer #contenedorFooter2 input.email {
         background: white;
         border: none;
         color: #979F9F;
         font-family: "Montserrat", sans-serif;
         font-size: 0.9em;
         padding: 7px 10px;
-        width: 180px; }
+        width: 100%; }
       footer #contenedorFooter2 input#suscribirse {
         background: none;
         border: none;
@@ -206,7 +214,8 @@ footer {
         font-family: "Montserrat", sans-serif;
         font-size: 0.9em;
         font-weight: 600;
-        margin-right: 10px; }
+        margin-left: 0px;
+        padding-top: 15px; }
     footer #contenedorFooter3 {
       display: flex;
       flex-direction: column;
@@ -254,6 +263,111 @@ footer {
 .navbar-light .navbar-toggler {
   border: none; }
 
+@media only screen and (min-width: 992px) {
+  #menuBootstrap .dropdown-menu {
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: .6s ease all; }
+  #menuBootstrap .dropdown-menu.show {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0px);
+    transition: .6s ease all; }
+  #menuBootstrap #menuDesplegable {
+    border: none;
+    padding: 0;
+    margin-top: 2rem; }
+    #menuBootstrap #menuDesplegable a {
+      padding: 1rem 1rem; }
+    #menuBootstrap #menuDesplegable a:hover {
+      background-color: #c6aa9d;
+      color: white;
+      text-decoration: none; } }
+
+@media only screen and (max-width: 992px) {
+  #menuDesplegable {
+    border: none;
+    padding: 0; }
+    #menuDesplegable a {
+      padding: .5rem 0 .5rem 3rem; } }
+
+.carousel {
+  margin-bottom: 4rem;
+  /* Since positioning the image, we need to help out the caption */
+  /* Declare heights because of positioning of img element */ }
+  .carousel .carousel-caption {
+    bottom: 11rem;
+    z-index: 10; }
+    .carousel .carousel-caption h1 {
+      text-shadow: 0px 0px 30px #00000036; }
+    .carousel .carousel-caption #textoSlider {
+      text-shadow: 0px 0px 30px #0000008c;
+      font-weight: 400; }
+    .carousel .carousel-caption p {
+      color: white;
+      width: 60%; }
+  .carousel .carousel-item {
+    height: 40rem; }
+  .carousel .carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: auto; }
+  .carousel #capaNegra {
+    background-color: rgba(0, 0, 0, 0.8); }
+  .carousel .btn-primary {
+    background-color: #c6aa9d;
+    border-color: #c6aa9d;
+    transition: all 1s; }
+  .carousel .btn-lg {
+    padding: .5rem 3rem;
+    font-size: 1.1rem; }
+  .carousel .btn-primary:hover {
+    background-color: #979f9f;
+    border-color: #979f9f;
+    transform: scale(1.1, 1.1); }
+
+@media only screen and (max-width: 768px) {
+  .carousel .w-100 {
+    width: auto !important; }
+  .carousel .carousel-item {
+    height: 40rem; }
+  .carousel .carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 100%; }
+  .carousel .carousel-caption {
+    bottom: 0;
+    top: 11rem;
+    z-index: 10; }
+    .carousel .carousel-caption h1 {
+      text-shadow: 0px 0px 30px #00000036;
+      font-size: 3em; }
+    .carousel .carousel-caption #textoSlider {
+      text-shadow: 0px 0px 30px #0000008c;
+      font-weight: 400;
+      width: 100%; }
+    .carousel .carousel-caption p {
+      color: white;
+      width: 60%; }
+    .carousel .carousel-caption .btn-lg {
+      padding: .5rem 2rem; } }
+
+@media only screen and (min-width: 769px) and (max-width: 1374px) {
+  .carousel .carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%; }
+  .carousel .w-100 {
+    width: 0 !important; } }
+
 #serviciosHome {
   display: grid;
   grid-template-columns: 100%;
@@ -270,7 +384,7 @@ footer {
   #serviciosHome .seccionServicios {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     text-align: center;
     padding: 0 5%; }
@@ -303,9 +417,8 @@ footer {
 @media only screen and (min-width: 768px) {
   #serviciosHome {
     display: grid;
-    grid-template-columns: 1fr repeat(3, 30%) 1fr;
-    grid-template-rows: 300px 350px 200px;
-    margin-top: 50px; }
+    grid-template-columns: 1fr repeat(3, 25%) 1fr;
+    margin-top: 0; }
     #serviciosHome #tituloMedioServicios {
       grid-column: 2/5;
       grid-row: 1;
@@ -408,7 +521,113 @@ footer {
   flex-direction: column;
   justify-content: space-between; }
   .main #headerServicios {
-    background-image: linear-gradient(179deg, rgba(198, 170, 158, 0.5) 0%, rgba(232, 219, 212, 0.5) 100%), url("../FOTOS/header-nosotras.jpg"); }
+    background-image: linear-gradient(179deg, rgba(198, 170, 158, 0.9) 0%, rgba(232, 219, 212, 0.8) 100%), url("../FOTOS/header-servicios2.jpg"); }
+  .main #headerCorporativos {
+    background-image: linear-gradient(179deg, rgba(198, 170, 158, 0.5) 0%, rgba(232, 219, 212, 0.5) 100%), url("../FOTOS/header-corporativo3.jpg"); }
+  .main #headerSociales {
+    background-image: linear-gradient(179deg, rgba(198, 170, 158, 0.5) 0%, rgba(232, 219, 212, 0.5) 100%), url("../FOTOS/header-sociales.jpg"); }
+  .main #headerCasamientos {
+    background-image: linear-gradient(179deg, rgba(198, 170, 158, 0.5) 0%, rgba(232, 219, 212, 0.5) 100%), url("../FOTOS/header-casamientos.jpg"); }
+  .main .soluciones {
+    display: grid;
+    grid-template-columns: 1fr repeat(3, 25%) 1fr;
+    margin-top: 50px;
+    background: linear-gradient(318deg, #d2dbdb 0%, #979f9f 84%);
+    background-attachment: fixed;
+    padding: 50px 0 100px 0; }
+    .main .soluciones h2 {
+      color: white; }
+    .main .soluciones #solucionesTitulo {
+      grid-column: 1/6;
+      grid-row: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 5% 0;
+      color: white; }
+      .main .soluciones #solucionesTitulo p {
+        color: white; }
+    .main .soluciones .box {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      text-align: center;
+      padding: 0 10%;
+      margin-bottom: 40px; }
+      .main .soluciones .box .flipBox {
+        height: 400px;
+        width: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        perspective: 1000px; }
+        .main .soluciones .box .flipBox .card {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          padding: 10% 15%;
+          background: #fff;
+          border-radius: 10px;
+          transform: translateY(0deg);
+          transform-style: preserve-3d;
+          backface-visibility: hidden;
+          box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+          transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1); }
+        .main .soluciones .box .flipBox .card img {
+          height: 80px;
+          margin-bottom: 20px; }
+        .main .soluciones .box .flipBox .front-face {
+          justify-content: center;
+          align-items: center;
+          text-align: center; }
+        .main .soluciones .box .flipBox .back-face {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          transform: rotateY(180deg); }
+          .main .soluciones .box .flipBox .back-face p {
+            margin: 0; }
+        .main .soluciones .box .flipBox h3 {
+          color: #4c4c4c; }
+        .main .soluciones .box .flipBox hr {
+          width: 50px;
+          border: 1px solid #c6aa9d;
+          opacity: 1; }
+    .main .soluciones .flipBox:hover > .front-face {
+      transform: rotateY(-180deg); }
+    .main .soluciones .flipBox:hover > .back-face {
+      transform: rotateY(0deg); }
+    .main .soluciones .box1 {
+      grid-column: 2/3;
+      grid-row: 2; }
+    .main .soluciones .box2 {
+      grid-column: 3/4;
+      grid-row: 2; }
+    .main .soluciones .box3 {
+      grid-column: 4/5;
+      grid-row: 2; }
+    .main .soluciones .box4 {
+      grid-column: 2/3;
+      grid-row: 3; }
+    .main .soluciones .box5 {
+      grid-column: 3/4;
+      grid-row: 3; }
+    .main .soluciones .box6 {
+      grid-column: 4/5;
+      grid-row: 3; }
+  .main .tituloServicios {
+    text-align: center;
+    padding: 100px 30% 50px 30%; }
+    .main .tituloServicios h2 {
+      font-size: 3.5em; }
+    .main .tituloServicios hr {
+      width: 50px;
+      border: 1px solid #c6aa9d;
+      margin: 25px auto 5px auto;
+      opacity: 1; }
   .main .bloqueA {
     height: 600px;
     display: flex;
@@ -417,7 +636,7 @@ footer {
     align-items: center;
     align-content: center; }
     .main .bloqueA__contenedorImg__Img {
-      transition: all 5s; }
+      transition: all 2s; }
     .main .bloqueA__contenedorImg__Img:hover {
       transform: scale(1.1, 1.1); }
     .main .bloqueA__contenedortexto {
@@ -468,7 +687,7 @@ footer {
       margin: 5px 0 5px auto;
       opacity: 1; }
     .main .bloqueB .imagenIzquierda img {
-      transition: all 5s; }
+      transition: all 2s; }
     .main .bloqueB .imagenIzquierda img:hover {
       transform: scale(1.1, 1.1); }
   .main #serviciosPasos {
@@ -517,7 +736,59 @@ footer {
       grid-column: 5/6;
       grid-row: 2; }
 
+@media only screen and (max-width: 760px) {
+  .main .soluciones {
+    grid-template-columns: 100vw; }
+    .main .soluciones #solucionesTitulo {
+      grid-column: 1/2;
+      grid-row: 1; }
+    .main .soluciones .box1 {
+      grid-column: 1/2;
+      grid-row: 2; }
+    .main .soluciones .box2 {
+      grid-column: 1/2;
+      grid-row: 3; }
+    .main .soluciones .box3 {
+      grid-column: 1/2;
+      grid-row: 4; }
+    .main .soluciones .box4 {
+      grid-column: 1/2;
+      grid-row: 5; }
+    .main .soluciones .box5 {
+      grid-column: 1/2;
+      grid-row: 6; }
+    .main .soluciones .box6 {
+      grid-column: 1/2;
+      grid-row: 7; } }
+
 @media (min-width: 761px) and (max-width: 1024px) {
+  .main .soluciones {
+    grid-template-columns: 1fr 1fr; }
+    .main .soluciones #solucionesTitulo {
+      grid-column: 1/3;
+      grid-row: 1; }
+    .main .soluciones .box1 {
+      grid-column: 1/2;
+      grid-row: 2; }
+    .main .soluciones .box2 {
+      grid-column: 2/3;
+      grid-row: 2; }
+    .main .soluciones .box3 {
+      grid-column: 1/2;
+      grid-row: 3; }
+    .main .soluciones .box4 {
+      grid-column: 2/3;
+      grid-row: 3; }
+    .main .soluciones .box5 {
+      grid-column: 1/2;
+      grid-row: 4; }
+    .main .soluciones .box6 {
+      grid-column: 2/3;
+      grid-row: 4; } }
+
+@media (min-width: 761px) and (max-width: 1024px) {
+  .main .tituloServicios {
+    padding: 100px 5% 50px 5%; }
   .main #serviciosPasos .paso {
     display: flex;
     flex-direction: row;
@@ -546,6 +817,8 @@ footer {
     grid-row: 3; } }
 
 @media (max-width: 760px) {
+  .main .tituloServicios {
+    padding: 100px 5% 50px 5%; }
   .main .bloqueA {
     height: 600px;
     display: flex;
@@ -609,6 +882,15 @@ footer {
     grid-column: 2/6;
     grid-row: 5; } }
 
+.navbar .nav-item:not(:last-child) {
+  margin-right: 35px; }
+
+.dropdown-toggle::after {
+  transition: transform 0.15s linear; }
+
+.show.dropdown .dropdown-toggle::after {
+  transform: translateY(3px); }
+
 .nosotras {
   display: flex;
   flex-direction: column;
@@ -646,57 +928,10 @@ footer {
       .nosotras .contenedorNosotras .textoDerecha hr {
         width: 50px;
         border: 1px solid #c6aa9d;
-        margin: 5px 0; }
-      .nosotras .contenedorNosotras .textoDerecha .lineaCortaMedio {
-        width: 50px;
-        border: 1px solid #c6aa9d;
-        margin: 5px 0;
+        margin: 20px 0;
         opacity: 1; }
-  .nosotras #contenedorTestimonios {
-    display: grid;
-    grid-template-columns: 10% repeat(4, 1fr) 10%;
-    grid-template-rows: auto;
-    background: linear-gradient(90deg, #e3dede 0%, #f9f4eb 100%);
-    margin-top: 50px;
-    padding: 50px 0; }
-    .nosotras #contenedorTestimonios .testimoniosTitulo {
-      grid-column: 2/6;
-      grid-row: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      margin: 50px 0; }
-    .nosotras #contenedorTestimonios .testimonio {
-      padding: 10px 10px 50px 10px; }
-      .nosotras #contenedorTestimonios .testimonio__estrellas {
-        color: #c6aa9d; }
-      .nosotras #contenedorTestimonios .testimonio__titulo {
-        font-weight: 500;
-        font-size: 24px;
-        color: #4c4c4c; }
-      .nosotras #contenedorTestimonios .testimonio__texto {
-        font-style: italic;
-        font-size: 0.9em;
-        line-height: 1.5em; }
-      .nosotras #contenedorTestimonios .testimonio__nombres {
-        color: black;
-        font-size: 17px;
-        font-weight: 400; }
-    .nosotras #contenedorTestimonios #testimonio1 {
-      grid-column: 2/3;
-      grid-row: 2; }
-    .nosotras #contenedorTestimonios #testimonio2 {
-      grid-column: 3/4;
-      grid-row: 2; }
-    .nosotras #contenedorTestimonios #testimonio3 {
-      grid-column: 4/5;
-      grid-row: 2; }
-    .nosotras #contenedorTestimonios #testimonio4 {
-      grid-column: 5/6;
-      grid-row: 2; }
 
+/* CAROUSEL LOGOS */
 @media (min-width: 761px) and (max-width: 1024px) {
   .nosotras .contenedorNosotras {
     height: auto;
@@ -738,7 +973,7 @@ footer {
         margin: 0 auto; }
     .nosotras .contenedorNosotras .textoDerecha {
       height: auto;
-      padding-top: 50px;
+      padding: 50px 0;
       align-items: center; }
       .nosotras .contenedorNosotras .textoDerecha h2, .nosotras .contenedorNosotras .textoDerecha p {
         text-align: center; }
@@ -757,7 +992,8 @@ footer {
 
 /*GALERIA */
 #headerGaleria {
-  background-image: linear-gradient(179deg, rgba(198, 170, 158, 0.5) 0%, rgba(232, 219, 212, 0.5) 100%), url("../FOTOS/header-nosotras.jpg"); }
+  background-image: linear-gradient(179deg, rgba(198, 170, 158, 0.5) 0%, rgba(232, 219, 212, 0.5) 100%), url("../FOTOS/header-nosotras.jpg");
+  margin-bottom: 0; }
 
 #galeria {
   display: flex;
@@ -813,6 +1049,83 @@ footer {
     padding: 0 2% 50px 2%; }
     #galeria .columnaGaleria {
       padding: 0 2%; } }
+
+.bloqueFoto {
+  display: flex;
+  width: 33.3%;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  padding-bottom: 20px; }
+  .bloqueFoto__Img {
+    width: 100%;
+    margin: 20px 0;
+    vertical-align: middle;
+    transition: all 2s; }
+  .bloqueFoto__categoria {
+    font-size: 12px;
+    margin: 0; }
+  .bloqueFoto__titulo {
+    margin-top: 0;
+    color: #979f9f; }
+
+.gallery {
+  min-height: 100vh;
+  padding: 50px 0 100px 0;
+  transition: all 0.2s cubic-bezier(0.34, 1.12, 0.68, 1.31); }
+
+.gallery .controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  list-style: none; }
+
+.gallery .controls .buttons {
+  height: 40px;
+  width: 140px;
+  border: solid 1px #c6aa9d;
+  color: #c6aa9d;
+  border-radius: 5px;
+  line-height: 40px;
+  cursor: pointer;
+  margin: 20px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  transition: all 1s; }
+
+.gallery .controls .buttons.active {
+  background: #c6aa9d;
+  color: #fff; }
+
+.gallery .controls .buttons:hover {
+  background: #c6aa9d;
+  color: #fff; }
+
+.gallery .image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.gallery .image-container .image {
+  height: 250px;
+  width: 350px;
+  overflow: hidden;
+  margin: 20px; }
+
+.gallery .image-container .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 1s;
+  filter: grayscale(100%); }
+
+.gallery .image-container .image:hover img {
+  transform: scale(1.2);
+  filter: grayscale(0%); }
 
 /*CONTACTO */
 #contacto #headerContacto {
@@ -1102,8 +1415,8 @@ footer {
       margin: 0;
       margin-bottom: 10px; }
     #contacto #contenedorPreguntas .preguntas__fondoNumero {
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
       border-radius: 50%;
       background-color: #c6aa9d;
       text-transform: uppercase;
@@ -1117,7 +1430,7 @@ footer {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
       font-weight: 600;
-      font-size: 1.1em; }
+      font-size: 1em !important; }
     #contacto #contenedorPreguntas .preguntas__titulo {
       grid-column: 2/3;
       grid-row: 1;
@@ -1300,6 +1613,197 @@ footer {
       display: grid;
       grid-template-columns: 60% 40%; } }
 
+.lineaCortaMedio {
+  width: 50px;
+  border: 1px solid #c6aa9d;
+  margin: 20px 0;
+  opacity: 1; }
+
+/*BOTONES*/
+.boton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px 0; }
+  .boton__link {
+    color: #c6aa9d;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    border: 1px solid #c6aa9d;
+    padding: 9px 70px;
+    text-align: center;
+    transition: all 1s;
+    border-radius: 5px; }
+  .boton__link:hover {
+    background-color: #c6aa9d;
+    color: white;
+    transform: scale(1.1, 1.1); }
+
+.textoPrincipal {
+  padding: 8% 23%;
+  text-align: justify;
+  font-size: 1.1em; }
+
+@media only screen and (max-width: 760px) {
+  .textoPrincipal {
+    padding: 8% 10%;
+    text-align: left; } }
+
+@media only screen and (min-width: 761px) and (max-width: 1024px) {
+  .textoPrincipal {
+    padding: 8% 10%; } }
+
+.bloqueDividido {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+  .bloqueDividido__izquierda {
+    grid-column: 1/2;
+    grid-row: 1;
+    display: flex; }
+  .bloqueDividido__derecha {
+    grid-column: 2/3;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    background: linear-gradient(90deg, #e3dede 0%, #f9f4eb 100%);
+    padding: 15%; }
+    .bloqueDividido__derecha h2 {
+      color: #979f9f; }
+    .bloqueDividido__derecha hr {
+      width: 50px;
+      border: 1px solid #c6aa9d;
+      margin: 20px 0;
+      opacity: 1; }
+    .bloqueDividido__derecha ul {
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.9em;
+      color: #979f9f; }
+  .bloqueDividido #izquierdaCasamientos {
+    background-image: url("/FOTOS/servicios-casamientos-2.jpg"); }
+  .bloqueDividido #izquierdaCorporativo {
+    background-image: url("/FOTOS/servicios-corporativos-1.jpg"); }
+  .bloqueDividido #izquierdaSociales {
+    background-image: url("/FOTOS/servicios-sociales-1.jpg"); }
+
+@media only screen and (max-width: 760px) {
+  .bloqueDividido {
+    grid-template-columns: 100%; }
+    .bloqueDividido__izquierda {
+      grid-column: 1/2;
+      grid-row: 1;
+      height: 300px;
+      background-position: center;
+      background-size: cover;
+      background-attachment: none; }
+    .bloqueDividido__derecha {
+      grid-column: 1/2;
+      grid-row: 2;
+      height: auto;
+      padding: 10%; }
+    .bloqueDividido #izquierdaCasamientos, .bloqueDividido #izquierdaSociales, .bloqueDividido #izquierdaCorporativo {
+      background-position: center;
+      background-size: cover;
+      background-attachment: none !important; } }
+
+@media only screen and (min-width: 761px) and (max-width: 1024px) {
+  .bloqueDividido {
+    grid-template-columns: 1fr 2fr; }
+    .bloqueDividido__izquierda {
+      grid-column: 1/2;
+      grid-row: 1;
+      background-attachment: none !important; }
+    .bloqueDividido__derecha {
+      grid-column: 2/3;
+      grid-row: 1;
+      height: auto;
+      padding: 7%; }
+    .bloqueDividido #izquierdaCasamientos, .bloqueDividido #izquierdaSociales, .bloqueDividido #izquierdaCorporativo {
+      background-position: center;
+      background-size: cover;
+      background-attachment: none !important; } }
+
+@media only screen and (min-width: 1024px) {
+  .bloqueDividido #izquierdaCasamientos, .bloqueDividido #izquierdaSociales, .bloqueDividido #izquierdaCorporativo {
+    background-position: left center;
+    background-size: 50%;
+    background-attachment: fixed; } }
+
+.contenedorTestimonios {
+  display: grid;
+  grid-template-columns: 10% repeat(4, 1fr) 10%;
+  grid-template-rows: auto;
+  padding: 8% 0; }
+  .contenedorTestimonios .testimoniosTitulo {
+    grid-column: 2/6;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 50px 0; }
+  .contenedorTestimonios .testimonio {
+    padding: 10px; }
+    .contenedorTestimonios .testimonio__estrellas {
+      color: #c6aa9d; }
+    .contenedorTestimonios .testimonio__titulo {
+      font-weight: 500;
+      font-size: 24px;
+      color: #4c4c4c; }
+    .contenedorTestimonios .testimonio__texto {
+      font-style: italic;
+      font-size: 0.9em;
+      line-height: 1.5em; }
+    .contenedorTestimonios .testimonio__nombres {
+      color: black;
+      font-size: 17px;
+      font-weight: 400; }
+  .contenedorTestimonios .testimonio1 {
+    grid-column: 2/3;
+    grid-row: 2; }
+  .contenedorTestimonios .testimonio2 {
+    grid-column: 3/4;
+    grid-row: 2; }
+  .contenedorTestimonios .testimonio3 {
+    grid-column: 4/5;
+    grid-row: 2; }
+  .contenedorTestimonios .testimonio4 {
+    grid-column: 5/6;
+    grid-row: 2; }
+
+@media only screen and (min-width: 761px) and (max-width: 1024px) {
+  .contenedorTestimonios .testimonio1 {
+    grid-column: 2/4;
+    grid-row: 2; }
+  .contenedorTestimonios .testimonio2 {
+    grid-column: 4/6;
+    grid-row: 2; }
+  .contenedorTestimonios .testimonio3 {
+    grid-column: 2/4;
+    grid-row: 3; }
+  .contenedorTestimonios .testimonio4 {
+    grid-column: 4/6;
+    grid-row: 3; } }
+
+@media only screen and (max-width: 760px) {
+  .contenedorTestimonios .testimonio1 {
+    grid-column: 2/6;
+    grid-row: 2; }
+  .contenedorTestimonios .testimonio2 {
+    grid-column: 2/6;
+    grid-row: 3; }
+  .contenedorTestimonios .testimonio3 {
+    grid-column: 2/6;
+    grid-row: 4; }
+  .contenedorTestimonios .testimonio4 {
+    grid-column: 2/6;
+    grid-row: 5; } }
+
 body {
   margin: 0; }
 
@@ -1340,27 +1844,3 @@ h5 {
   font-weight: 500;
   color: #c6aa9d;
   margin: 0; }
-
-/*BOTONES*/
-.boton {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 30px 0; }
-  .boton__link {
-    color: #c6aa9d;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    text-decoration: none;
-    border: 1px solid #c6aa9d;
-    transition-duration: .25s;
-    padding: 9px 70px;
-    text-align: center;
-    transition: all 1s;
-    border-radius: 5px; }
-  .boton__link:hover {
-    background-color: #c6aa9d;
-    color: white;
-    transform: scale(1.2, 1.2); }

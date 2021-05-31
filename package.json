@@ -1,7 +1,7 @@
 {
-  "name": "entrega_clase11",
+  "name": "",
   "version": "1.0.0",
-  "description": "",
+  "description": "Proyecto basado en crear un sitio para una pyme dedicada a ambientación de eventos privados y sociales, buscando reflejar el profesionalismo y la calidad del servicio.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
